@@ -19,7 +19,7 @@ node build/get-spdx-licenses.js | jq
 
 ## Example output
 
-(some output omitted got brevity)
+(some output omitted for brevity)
 
 ```json
 {
