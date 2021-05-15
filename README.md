@@ -1,5 +1,16 @@
 # Getting the list of licenses from SPDX
 
+## By triggering the GitHub Action
+
+The project has a GitHub Action configured to get the list of licenses. This way, you don't have to install anything on
+your own machine. Just go to
+[https://github.com/jspaaks/get-spdx-licenses/actions/workflows/get-spdx-licenses.yml](https://github.com/jspaaks/get-spdx-licenses/actions/workflows/get-spdx-licenses.yml),
+click `Run workflow`, and the workflow should start after a few seconds delay. Wait till it finished and click to see
+the terminal output. There should be an item labeled `Get the list of licenses, print it here` which contains the list
+of licenses for the Citation File Format's jsonschema schema.
+
+## By running the script locally
+
 ```
 cd <to this directory>
 
