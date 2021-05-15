@@ -13,7 +13,7 @@ npm install --global typescript
 tsc
 
 # run the script, let jq do the pretty print
-node build/get-spdx-licenses.js | jq
+node build/get-spdx-licenses.js | jq --indent 4
 ```
 
 
@@ -23,24 +23,31 @@ node build/get-spdx-licenses.js | jq
 
 ```json
 {
-  "$comment": "SPDX license list; releaseDate=2021-05-14; source=https://raw.githubusercontent.com/spdx/license-list-data/master/json/licenses.json",
-  "license": {
+    "$comment": "SPDX license list; releaseDate=2021-05-14; source=https://raw.githubusercontent.com/spdx/license-list-data/master/json/licenses.json",
     "enum": [
-      "0BSD",
-      "AAL",
-      "ADSL",
-      "AFL-1.1",
-      "AFL-1.2",
-      "AFL-2.0",
-      "AFL-2.1",
-      "AFL-3.0",
-      "AGPL-1.0",
-      "AGPL-1.0-only",
-      ...
-      "xpp",
-      "zlib-acknowledgement"
+        "0BSD",
+        "AAL",
+        "ADSL",
+        "AFL-1.1",
+        "AFL-1.2",
+        "AFL-2.0",
+        "AFL-2.1",
+        "AFL-3.0",
+        "AGPL-1.0",
+        "AGPL-1.0-only",
+        "AGPL-1.0-or-later",
+        "AGPL-3.0",
+        "AGPL-3.0-only",
+        "AGPL-3.0-or-later",
+
+        "...",
+
+        "psutils",
+        "wxWindows",
+        "xinetd",
+        "xpp",
+        "zlib-acknowledgement"
     ],
     "type": "string"
-  }
 }
 ```

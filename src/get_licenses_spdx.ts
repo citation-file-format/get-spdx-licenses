@@ -7,10 +7,8 @@ async function getit() {
     const licenseIds = data.licenses.map((license: any) => {return license.licenseId as string}).sort();
     const stringified = JSON.stringify({
         "$comment": "SPDX license list; releaseDate=" + data.releaseDate + "; source=" + spdxUrl,
-        "license": {
-            "enum": licenseIds,
-            "type": "string"
-        }
+        "enum": licenseIds,
+        "type": "string"
     });
     console.log(stringified);
 }
