@@ -1,0 +1,17 @@
+{
+  "name": "get-licenses-spdx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "get_licenses_spdx.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.10"
+  }
+}
