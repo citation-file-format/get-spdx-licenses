@@ -5,6 +5,7 @@ jobs:
     name: get-spdx-licenses
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@main        
       - name: Install TypeScript compiler
         run: npm install typescript
       - name: Install runtime dependencies
