@@ -1,0 +1,31 @@
+name: get-spdx-licenses
+
+# Trigger this workflow by clicking the button in GitHub's web interface
+on: workflow_dispatch
+
+jobs:
+  get_spdx_licenses:
+    name: get-spdx-licenses
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+
+      - name: Use Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install TypeScript compiler
+        run: npm install typescript
+
+      - name: Install runtime dependencies
+        run: npm install
+
+      - name: Transpile TypeScript code into JavaScript code
+        run: npm run build
+
+      - name: info
+        run: ls -la && cd build && ls -la
+
+      - name: Get the list of licenses, print it here
+        run: node build/get_spdx_licenses.js | jq --indent 4
