@@ -12,7 +12,6 @@ npm install --global typescript
 # compile the code from src/ into build/ (as per the configuration from ./tsconfig.json)
 tsc
 
-# run the script
-node build/get-spdx-licenses.js
-
+# run the script, let jq do the pretty print
+node build/get-spdx-licenses.js | jq
 ```
