@@ -5,14 +5,22 @@ jobs:
     name: get-spdx-licenses
     runs-on: ubuntu-latest
     steps:
+      - name: Update node and npm
+        run: nvm install 14 && nvm alias default 14
+
       - uses: actions/checkout@main
+
       - name: Install TypeScript compiler
         run: npm install typescript
+
       - name: Install runtime dependencies
         run: npm install
+
       - name: Transpile TypeScript code into JavaScript code
         run: tsc
+
       - name: info
         run: ls -la && cd build && ls -la
+
       - name: Get the list of licenses, print it here
         run: node build/get_spdx_licenses.js
