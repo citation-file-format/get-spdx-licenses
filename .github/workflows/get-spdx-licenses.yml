@@ -1,0 +1,9 @@
+on: [push]
+
+jobs:
+  get_spdx_licenses:
+    name: get-spdx-licenses
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: npm install
