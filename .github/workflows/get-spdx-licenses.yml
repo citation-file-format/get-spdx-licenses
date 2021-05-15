@@ -1,4 +1,7 @@
-on: [push]
+name: get-spdx-licenses
+
+# Trigger this workflow by clicking the button in GitHub's web interface
+on: workflow_dispatch
 
 jobs:
   get_spdx_licenses:
