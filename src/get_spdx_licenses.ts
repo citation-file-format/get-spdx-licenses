@@ -10,7 +10,7 @@ async function getit() {
     });
     const stringified = JSON.stringify({
         "$comment": "Use https://github.com/citation-file-format/get-spdx-licenses to update this enum in the future",
-        "description": `SPDX license list; releaseDate={data.releaseDate}; licenseListVersion={data.licenseListVersion}; source={spdxUrl}`,
+        "description": `SPDX license list; releaseDate=${data.releaseDate}; licenseListVersion=${data.licenseListVersion}; source=${spdxUrl}`,
         "enum": sortedLicenseIds,
         "type": "string"
     });
