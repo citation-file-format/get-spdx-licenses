@@ -10,10 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use 'latest' Node.js version
+      - name: Use latest LTS Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: latest
+          node-version: lts/*
 
       - name: Install TypeScript compiler
         run: npm install typescript
