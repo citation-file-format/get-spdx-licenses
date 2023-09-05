@@ -25,4 +25,4 @@ jobs:
         run: npm run build
 
       - name: Get the list of licenses, print it here
-        run: node build/get_spdx_licenses.js | jq --indent 4
+        run: node build/get_spdx_licenses.js | jq --indent 4 | sed 's/^/        /'
