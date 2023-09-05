@@ -8,12 +8,12 @@ jobs:
     name: get-spdx-licenses
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v4
 
-      - name: Use Node.js 14
-        uses: actions/setup-node@v1
+      - name: Use 'latest' Node.js version
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: latest
 
       - name: Install TypeScript compiler
         run: npm install typescript
