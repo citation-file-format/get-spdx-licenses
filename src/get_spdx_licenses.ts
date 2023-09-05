@@ -9,7 +9,8 @@ async function getit() {
         return self.toLowerCase().localeCompare(other.toLowerCase());
     });
     const stringified = JSON.stringify({
-        "$comment": "SPDX license list; releaseDate=" + data.releaseDate + "; source=" + spdxUrl,
+        "$comment": "Use https://github.com/citation-file-format/get-spdx-licenses to update this enum in the future",
+        "description": `SPDX license list; releaseDate={data.releaseDate}; licenseListVersion={data.licenseListVersion}; source={spdxUrl}`,
         "enum": sortedLicenseIds,
         "type": "string"
     });
@@ -17,5 +18,3 @@ async function getit() {
 }
 
 getit()
-
-
