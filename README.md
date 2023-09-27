@@ -17,14 +17,11 @@ cd <to this directory>
 # install the project's dependencies
 npm install
 
-# install typescript compiler if need be
-npm install --global typescript
-
 # compile the code from src/ into build/ (as per the configuration from ./tsconfig.json)
-tsc
+npm run build
 
 # run the script, let jq do the pretty print
-node build/get-spdx-licenses.js | jq --indent 4
+npm run get-licenses | tail -n -1 | jq --indent 4 '.'
 ```
 
 

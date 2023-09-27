@@ -2,7 +2,8 @@
   "author": "Jurriaan H. Spaaks",
   "name": "get-licenses-spdx",
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "@types/node-fetch": "^2.5.10"
@@ -10,10 +11,10 @@
   "description": "Script to download the list of license identifiers from SPDX and wrangle it into a format used by the Citation File Format schema",
   "license": "Apache-2.0",
   "main": "build/get_licenses_spdx.js",
-  "repository": "https://github.com/jspaaks/get-spdx-licenses", 
+  "repository": "https://github.com/jspaaks/get-spdx-licenses",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "get-spdx-licenses": "node build/get_spdx_licenses.js"
+    "get-licenses": "node build/get_spdx_licenses.js"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
