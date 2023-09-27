@@ -6,7 +6,7 @@ on:
 
 jobs:
   get_spdx_licenses:
-    name: get-spdx-licenses
+    name: get-licenses
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
